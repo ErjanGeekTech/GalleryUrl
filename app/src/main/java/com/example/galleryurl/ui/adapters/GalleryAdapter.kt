@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.galleryurl.databinding.ItemGalleryBinding
-import com.squareup.picasso.Picasso
+import com.example.galleryurl.utils.extensions.setPicasso
 
 class GalleryAdapter : ListAdapter<String, GalleryAdapter.GalleryViewHolder>(
     differCallback
@@ -26,12 +26,10 @@ class GalleryAdapter : ListAdapter<String, GalleryAdapter.GalleryViewHolder>(
         getItem(position)?.let { holder.onBind(it) }
     }
 
-    class GalleryViewHolder(private val binding: ItemGalleryBinding) : RecyclerView.ViewHolder(binding.root) {
+    class GalleryViewHolder(private val binding: ItemGalleryBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun onBind(url: String) {
-            Picasso.get ()
-                .load (url)
-                .resize (200, 200)
-                .into (binding.imageUrl)
+            binding.imageUrl.setPicasso(url)
         }
     }
 
@@ -50,7 +48,6 @@ class GalleryAdapter : ListAdapter<String, GalleryAdapter.GalleryViewHolder>(
             ): Boolean {
                 return oldItem == newItem
             }
-
         }
     }
 }
