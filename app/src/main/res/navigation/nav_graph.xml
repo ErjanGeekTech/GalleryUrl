@@ -15,4 +15,28 @@
         android:name="com.example.galleryurl.ui.fragments.randomPhoto.RandomPhotoFragment"
         android:label="fragment_random_photo"
         tools:layout="@layout/fragment_random_photo" />
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="com.example.galleryurl.ui.fragments.onBoard.main.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" >
+        <action
+            android:id="@+id/action_onBoardFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zeroOnBoardFragment"
+        android:name="com.example.galleryurl.ui.fragments.onBoard.zero.ZeroOnBoardFragment"
+        android:label="fragment_zero_on_board"
+        tools:layout="@layout/fragment_zero_on_board" />
+    <fragment
+        android:id="@+id/oneOnBoardFragment"
+        android:name="com.example.galleryurl.ui.fragments.onBoard.one.OneOnBoardFragment"
+        android:label="fragment_one_on_board"
+        tools:layout="@layout/fragment_one_on_board" />
+    <fragment
+        android:id="@+id/twoOnBoardFragment"
+        android:name="com.example.galleryurl.ui.fragments.onBoard.two.TwoOnBoardFragment"
+        android:label="fragment_two_on_board"
+        tools:layout="@layout/fragment_two_on_board" />
 </navigation>

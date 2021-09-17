@@ -2,10 +2,12 @@ package com.example.galleryurl.ui.fragments.gallery
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import java.util.*
+import javax.inject.Inject
 import kotlin.collections.ArrayList
-
-class GalleryViewModel : ViewModel() {
+@HiltViewModel
+class GalleryViewModel @Inject constructor() : ViewModel() {
 
     val mutableLiveData: MutableLiveData<List<String>> = MutableLiveData()
     private var list: ArrayList<String> = ArrayList()

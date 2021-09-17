@@ -9,7 +9,9 @@ import com.example.galleryurl.ui.fragments.gallery.GalleryViewModel
 import com.example.galleryurl.utils.extensions.getTextE
 import com.example.galleryurl.utils.extensions.isValid
 import com.example.galleryurl.utils.extensions.setPicasso
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RandomPhotoFragment : BaseFragment<FragmentRandomPhotoBinding, GalleryViewModel>(R.layout.fragment_random_photo) {
 
     override val binding by viewBinding(FragmentRandomPhotoBinding::bind)

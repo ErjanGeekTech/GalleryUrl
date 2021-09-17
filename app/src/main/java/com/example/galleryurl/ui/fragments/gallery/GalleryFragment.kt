@@ -7,7 +7,9 @@ import com.example.galleryurl.R
 import com.example.galleryurl.base.BaseFragment
 import com.example.galleryurl.databinding.FragmentGalleryBinding
 import com.example.galleryurl.ui.adapters.GalleryAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GalleryFragment :
     BaseFragment<FragmentGalleryBinding, GalleryViewModel>(R.layout.fragment_gallery) {
 
